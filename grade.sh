@@ -39,7 +39,7 @@ echo "$output"
 
 # Extract the summary line
 
-OKsummary=$(echo $summary | grep -o "OK ([0-9]* tests)" | grep -o "[0-9]*")
+OKsummary=$(echo $output | grep -o "OK ([0-9]* tests)" | grep -o "[0-9]*")
 if [[ $? -eq 0 ]]
 then 
     echo "GRADE: $OKsummary / $OKsummary"
